@@ -1,0 +1,173 @@
+/* THIS IS CSS RESET */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+/* MOBILE VIEW */
+
+/* general styling */
+/*img {
+max width: 100%;}
+#gallery {
+display:grid;
+grid-template-columns: repeat (4,1fr)(auto-fit, minmax(200px, 1fr))
+}
+margin: auto;
+max-width: 1000px
+grid-gap: 10px;*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+}
+
+h1 {
+    font-size: 2.77rem;
+    text-align: center;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+img{
+    max-width: 100%
+}
+
+p {
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+    color: darkgrey;
+    display: block;
+}
+
+/* Styling navigation */
+
+nav li {
+    display: inline;
+}
+
+nav li a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-bottom: 0.1rem solid black;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.7rem;
+}
+
+nav li a:hover {
+    background-color: #666;
+}
+
+footer {
+    color: darkgray;
+    font-size: 0.8rem;
+    font-family: Arial;
+    text-align: center;
+    height: 3rem;
+    margin-top: 1rem;
+}
+
+.image:hover {
+    background-size: 100%;
+    opacity: 0.5;
+    transform: scale(0.9);
+}
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+}
+#overlay.show{
+    display: block;
+}
+
+/* TABLET VIEW */
+
+@media (min-width: 35rem) {
+    
+    h1 {
+        font-size: 3.77rem;
+        color: coral;
+    }
+    h2 {
+        font-size: 1.77rem;
+        text-align: center;
+    }
+    
+    p {
+        text-align: center;
+    }
+    
+    .show img {
+    margin: 0 auto;   
+    display: block;  
+    }
+    
+    
+    /* Styling navigation */
+    nav li a {
+        font-size: 1rem;
+        color: coral;
+    }
+    nav {
+        background-color: #333;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    ul li {
+        width: 100%;
+        border-right: 0.1rem solid #666;
+    }
+
+    li:nth-child(4) {
+        border: 0;
+    }
+    
+    /*Styling the Gallery*/
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+/*      grid-template-rows: 1fr 1fr 1fr 1fr;*/
+        grid-gap: 0.7rem;
+    }
+
+}
+
+
+
+/*DESKTOP VIEW*/
+
+
+@media all and (min-width:80rem) {
+/*  styling the gallery  */
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+/*      grid-auto-rows: 1fr 1fr 1fr;*/
+    }
+}
